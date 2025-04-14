@@ -1,8 +1,3 @@
-Sure! Here's your **README.md** file content in proper markdown format, ready to be saved as `README.md` in your project:
-
----
-
-```markdown
 # 🎓 NEB GPA Calculator (Grade 12 – 2082)
 
 A command-line Python program to calculate the final GPA for **Grade 12 students under the NEB (National Examination Board), Nepal**. It supports GPA or raw marks input and outputs your GPA breakdown with final GPA based on subject credit weight.
