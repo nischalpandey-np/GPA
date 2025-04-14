@@ -1,105 +1,98 @@
-📘 NEB GPA Calculator (Grade 12 – 2082)
-This is a command-line Python program to calculate the final GPA for Grade 12 students under the National Examination Board (NEB) of Nepal. It allows students to enter their scores either as GPA or raw marks, processes them based on a weighted credit system, and outputs both individual subject GPAs and the final cumulative GPA.
+Sure! Here's your **README.md** file content in proper markdown format, ready to be saved as `README.md` in your project:
 
-✅ Features
-Supports 6 subjects: English, Nepali, Mathematics, Physics, Chemistry, and Computer Science
+---
 
-Handles credit distribution between theory and internal/practical components
+```markdown
+# 🎓 NEB GPA Calculator (Grade 12 – 2082)
 
-Allows user to input scores as either:
+A command-line Python program to calculate the final GPA for **Grade 12 students under the NEB (National Examination Board), Nepal**. It supports GPA or raw marks input and outputs your GPA breakdown with final GPA based on subject credit weight.
 
-GPA (Grade Point) – e.g., 3.6
+---
 
-Raw marks – e.g., 60 out of 75
+## ✅ Features
 
-Converts raw marks into GPA using NEB’s percentage-to-GPA scale
+- Covers 6 major NEB subjects:
+  - English
+  - Nepali
+  - Mathematics
+  - Physics
+  - Chemistry
+  - Computer Science
+- Input options:
+  - GPA (e.g., 3.6 for A)
+  - Raw Marks (e.g., 60 out of 75)
+- Converts marks to GPA using NEB percentage scale
+- Calculates:
+  - Internal/Practical GPA
+  - Theory GPA
+  - Weighted Subject GPA
+  - Final GPA (Credit-based)
+- Clean tabulated results using the `tabulate` module
 
-Calculates:
+---
 
-Theory GPA
+## 📊 GPA Scale (Based on Percentage)
 
-Internal/Practical GPA
+| Percentage Range | GPA |
+|------------------|-----|
+| 90–100%          | 4.0 |
+| 80–89%           | 3.6 |
+| 70–79%           | 3.2 |
+| 60–69%           | 2.8 |
+| 50–59%           | 2.4 |
+| 40–49%           | 2.0 |
+| 35–39%           | 1.6 |
+| Below 35%        | 0.0 |
 
-Weighted Subject GPA
+---
 
-Final GPA based on total credits
+## 📦 Requirements
 
-Presents results in a clean, tabulated format using the tabulate module
+- Python 3.x
+- `tabulate` module  
+  Install with:
+  ```bash
+  pip install tabulate
+  ```
 
-📊 GPA Scale (Based on Percentage)
-Percentage Range	GPA
-90–100%	4.0
-80–89%	3.6
-70–79%	3.2
-60–69%	2.8
-50–59%	2.4
-40–49%	2.0
-35–39%	1.6
-Below 35%	0.0
-📦 Requirements
-Python 3.x
+---
 
-tabulate library (install using pip install tabulate)
+## 🚀 How to Run
 
-🚀 How to Use
-Run the script:
+1. Clone/download the script.
+2. Open terminal or command prompt.
+3. Run the program:
+   ```bash
+   python gpa_calculator.py
+   ```
+4. Select input type:
+   - `1` for GPA
+   - `2` for Marks
+5. Enter theory and internal/practical scores for each subject.
+6. Get your final GPA with a detailed subject-wise summary.
 
-bash
-Copy
-Edit
-python gpa_calculator.py
-Choose your input method:
+---
 
-1 for GPA input
+## 🧮 How GPA is Calculated
 
-2 for Raw Marks input
+Each subject has a specific credit split between theory and internal/practical. Final GPA per subject is calculated using:
 
-Enter theory and internal/practical scores for each subject.
+```
+Subject GPA = 
+((Theory GPA × Theory Credits) + (Internal GPA × Internal Credits)) / Total Credits
+```
 
-View the detailed GPA breakdown and your final GPA.
+Then your overall GPA is calculated using:
 
-🧮 Calculation Logic
-Each subject has different credit allocations for theory and internal/practical. The final GPA for each subject is calculated as a weighted average:
+```
+Final GPA = Total of (Subject GPA × Subject Credits) / Total Credit Hours
+```
 
-Subject GPA
-=
-(
-Theory GPA
-×
-Theory Credits
-)
-+
-(
-Internal GPA
-×
-Internal Credits
-)
-Total Credits
-Subject GPA= 
-Total Credits
-(Theory GPA×Theory Credits)+(Internal GPA×Internal Credits)
-​
- 
-The final GPA is calculated as:
+---
 
-Final GPA
-=
-∑
-(
-Subject GPA
-×
-Subject Credits
-)
-Total Credit Hours
-Final GPA= 
-Total Credit Hours
-∑(Subject GPA×Subject Credits)
-​
- 
-📘 Example Output
-text
-Copy
-Edit
+## 📘 Sample Output
+
+```
 === GPA Summary Table ===
 ╒════════════════════╤═════════════════════════╤══════════════╤══════════════╕
 │ Subject            │ Internal/Practical GPA  │ Theory GPA   │ Overall GPA  │
@@ -113,10 +106,28 @@ Edit
 Total Credit Hours: 27
 Total (Credit × Grade Point): 92.16
 🎓 Your Final GPA: 3.41
-🧠 Ideal For
-NEB Grade 12 Students
+```
 
-Teachers & Academic Institutions
+---
 
-GPA prediction & analysis tools
+## 🧠 Ideal For
 
+- NEB Grade 12 Students
+- Teachers & Schools
+- GPA estimation tools
+- Final exam preparation
+
+---
+
+## 📄 License
+
+This project is free to use and modify for educational purposes.
+
+---
+
+## 💡 Suggestions or Contributions?
+
+Pull requests, feature suggestions, or improvements are always welcome!
+
+---
+```
